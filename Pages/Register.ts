@@ -1,6 +1,6 @@
 import { type Locator, type Page } from '@playwright/test';
 
-export class LandingPage {
+export class RegisterPage {
     //variables
     readonly page: Page;
     readonly getStartedButton: Locator;
@@ -10,13 +10,15 @@ export class LandingPage {
         this.page = page;
         this.getStartedButton = page.getByRole('banner').getByRole('button', { name: 'Get Started' })
 
-
     }
-
     //methods
     async clickGetStarted() {
         await this.getStartedButton.click();
     }
+
+    async fillName(){
+        
+    }
 }
 
-export default LandingPage;
+export default RegisterPage;

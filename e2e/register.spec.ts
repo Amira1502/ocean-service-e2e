@@ -1,21 +1,21 @@
 import { test, expect, type Page } from '@playwright/test';
-import { LandingPage } from '../Pages/LandingPage';
+import { RegisterPage } from '../Pages/Register';
 
 
 //AAA patern
 const URL= "https://www.oceanservicecenter.com/"
-let landingPage: LandingPage;
+let registerPage: RegisterPage;
 
 
 test.beforeEach(async ({page}) => {
   await page.goto(URL);
-  landingPage = new LandingPage(page);
+  registerPage = new RegisterPage(page);
   // await page.getByRole('banner').getByRole('button', { name: 'Get Started' }).click();
   await clickGetStarted(page);
 });
 
 async function clickGetStarted(page: Page) {
-  await landingPage.clickGetStarted();
+  await registerPage.clickGetStarted();
 }
 
 test.describe('Register Scenario', async()=>{ 
