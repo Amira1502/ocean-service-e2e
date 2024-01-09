@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "CI":"npx playwright e2e"
+    "regression":"npx playwright test"
   },
   "keywords": [],
   "author": "",
